@@ -8,7 +8,7 @@ The backend is **Python FastAPI**, as required. The interface is dependency-ligh
 
 | Check | Measured result |
 |---|---:|
-| Automated tests | 45 passed |
+| Automated tests | 46 passed |
 | Branch-aware code coverage | 89% |
 | Behavioural scenarios | 9/9 passed |
 | Deterministic agent latency | p50 0.61 ms; p95 1.03 ms |
@@ -67,6 +67,9 @@ docker compose up --build
 ```
 
 The default `.env.example` uses `AI_PROVIDER=demo`, so the application works without an API key.
+
+The project includes Python's first-party `tzdata` package so IANA timezones such as
+`Asia/Kolkata` also work on Windows, where a system timezone database is normally absent.
 
 ## Use an external AI model
 

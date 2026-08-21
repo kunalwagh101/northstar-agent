@@ -19,7 +19,7 @@ def test_homepage_and_security_headers(client: TestClient) -> None:
 def test_health_project_and_metrics(client: TestClient) -> None:
     health = client.get("/healthz")
     assert health.status_code == 200
-    assert health.json() == {"status": "ok", "version": "1.0.0", "provider": "demo"}
+    assert health.json() == {"status": "ok", "version": "1.0.1", "provider": "demo"}
 
     project = client.get("/api/project")
     assert project.status_code == 200

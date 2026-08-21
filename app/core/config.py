@@ -36,7 +36,7 @@ def _as_csv(name: str, default: tuple[str, ...]) -> tuple[str, ...]:
 @dataclass(frozen=True, slots=True)
 class Settings:
     app_name: str = "Northstar Homes AI Sales Agent"
-    app_version: str = "1.0.0"
+    app_version: str = "1.0.1"
     app_env: str = "development"
     log_level: str = "INFO"
 

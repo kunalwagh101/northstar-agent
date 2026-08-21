@@ -308,7 +308,7 @@ Each case needs expected intent, accepted facts, forbidden claims, required acti
 ### Measured
 
 - Deterministic cases: 9/9 passed.
-- Automated tests: 45 passed.
+- Automated tests: 46 passed.
 - Current deterministic p50: 0.61 ms.
 - Current deterministic p95: 1.03 ms.
 - External inference cost: ₹0 in deterministic mode.
