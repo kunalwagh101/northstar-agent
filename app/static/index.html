@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Northstar Homes multilingual AI sales assistant demo">
+    <title>Northstar Homes · AI Sales Assistant</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#message-input">Skip to message input</a>
+
+    <main class="app-shell">
+      <aside class="project-panel" aria-label="Project information">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">N</div>
+          <div>
+            <p class="eyebrow">Northstar Homes</p>
+            <p class="brand-subtitle">Homes shaped around you</p>
+          </div>
+        </div>
+
+        <section class="project-hero" aria-labelledby="project-title">
+          <p class="project-label">Featured project</p>
+          <h1 id="project-title">Northstar One</h1>
+          <p class="location">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Zm0-9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
+            </svg>
+            Sector 79, Gurugram
+          </p>
+        </section>
+
+        <section class="price-grid" aria-label="Starting prices">
+          <article class="price-card">
+            <span>2 BHK</span>
+            <strong>₹1.35 Cr</strong>
+            <small>onwards</small>
+          </article>
+          <article class="price-card">
+            <span>3 BHK</span>
+            <strong>₹1.75 Cr</strong>
+            <small>onwards</small>
+          </article>
+        </section>
+
+        <section class="trust-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2 4 5v6c0 5.1 3.4 9.8 8 11 4.6-1.2 8-5.9 8-11V5l-8-3Zm-1.1 14.2-3.4-3.4 1.4-1.4 2 2 4.3-4.3 1.4 1.4-5.7 5.7Z"/>
+          </svg>
+          <div>
+            <strong>Confirmed facts only</strong>
+            <p>Aarohi will never invent prices, discounts or availability.</p>
+          </div>
+        </section>
+
+        <p class="privacy-copy">
+          Demo conversations expire automatically. Please avoid sharing sensitive information.
+        </p>
+      </aside>
+
+      <section class="conversation-panel" aria-label="Conversation with Aarohi">
+        <header class="chat-header">
+          <div class="agent-identity">
+            <div class="avatar" aria-hidden="true">A</div>
+            <div>
+              <div class="agent-name-row">
+                <h2>Aarohi</h2>
+                <span class="ai-badge">AI</span>
+              </div>
+              <p><span class="online-dot" aria-hidden="true"></span> Northstar sales assistant</p>
+            </div>
+          </div>
+
+          <div class="header-actions">
+            <div class="channel-switch" role="group" aria-label="Conversation style">
+              <button class="channel-button active" data-channel="chat" type="button" aria-pressed="true">
+                Chat
+              </button>
+              <button class="channel-button" data-channel="voice" type="button" aria-pressed="false">
+                Voice style
+              </button>
+            </div>
+            <button id="new-chat" class="icon-button" type="button" aria-label="Start a new conversation" title="New conversation">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 5V2l-4 4 4 4V7a5 5 0 1 1-4.6 7H5.3A7 7 0 1 0 12 5Z"/>
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="conversation-body">
+          <div class="chat-column">
+            <div id="connection-banner" class="connection-banner" role="status" hidden></div>
+
+            <div id="messages" class="messages" aria-live="polite" aria-relevant="additions">
+              <div class="welcome-state" id="welcome-state">
+                <div class="welcome-icon" aria-hidden="true">✦</div>
+                <h3>Let’s find what fits</h3>
+                <p>Ask about Northstar One in English, हिंदी, or Hinglish.</p>
+              </div>
+            </div>
+
+            <div id="typing-indicator" class="typing-indicator" aria-label="Aarohi is typing" hidden>
+              <span></span><span></span><span></span>
+            </div>
+
+            <div id="quick-replies" class="quick-replies" aria-label="Suggested messages">
+              <button type="button" data-message="I am interested in a 2 BHK">I’m looking for 2 BHK</button>
+              <button type="button" data-message="Mujhe 3 BHK ke baare mein batao">3 BHK ke baare mein</button>
+              <button type="button" data-message="I would like to book a site visit">Book a site visit</button>
+            </div>
+
+            <form id="chat-form" class="composer">
+              <label class="sr-only" for="message-input">Write your message</label>
+              <textarea id="message-input" name="message" rows="1" maxlength="2000" placeholder="Write a message…" autocomplete="off" required></textarea>
+              <button id="send-button" class="send-button" type="submit" aria-label="Send message">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m3.4 20.4 17.4-7.5c1.1-.5 1.1-1.3 0-1.8L3.4 3.6c-.9-.4-1.7.1-1.4 1.2L4 11.1l9 1-9 1.8-2 5.3c-.4 1.1.4 1.6 1.4 1.2Z"/>
+                </svg>
+              </button>
+            </form>
+            <p class="composer-note">AI can make mistakes. Important details require human confirmation.</p>
+          </div>
+
+          <aside class="lead-panel" aria-labelledby="lead-title">
+            <div class="lead-panel-heading">
+              <div>
+                <p class="eyebrow">Live context</p>
+                <h3 id="lead-title">What I understand</h3>
+              </div>
+              <span id="lead-score" class="score-pill">New lead</span>
+            </div>
+
+            <dl class="lead-fields">
+              <div>
+                <dt>Configuration</dt>
+                <dd id="field-configuration">Not shared</dd>
+              </div>
+              <div>
+                <dt>Budget</dt>
+                <dd id="field-budget">Not shared</dd>
+              </div>
+              <div>
+                <dt>Purpose</dt>
+                <dd id="field-purpose">Not shared</dd>
+              </div>
+              <div>
+                <dt>Timeline</dt>
+                <dd id="field-timeline">Not shared</dd>
+              </div>
+              <div>
+                <dt>Site visit</dt>
+                <dd id="field-visit">Not requested</dd>
+              </div>
+              <div>
+                <dt>Language</dt>
+                <dd id="field-language">English</dd>
+              </div>
+            </dl>
+
+            <button id="view-analytics" class="secondary-button" type="button" disabled>
+              View lead analytics
+            </button>
+            <p class="lead-help">This panel updates only from information you choose to share.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="analytics-dialog" class="analytics-dialog" aria-labelledby="analytics-title">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">Conversation outcome</p>
+          <h2 id="analytics-title">Lead analytics</h2>
+        </div>
+        <button id="close-analytics" class="icon-button" type="button" aria-label="Close analytics">×</button>
+      </div>
+      <div id="analytics-summary" class="analytics-summary"></div>
+      <div id="analytics-grid" class="analytics-grid"></div>
+      <div class="dialog-footer">
+        <button id="dialog-new-chat" class="primary-button" type="button">Start new conversation</button>
+      </div>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>
