@@ -41,8 +41,8 @@ See the committed [behavioural evaluation report](evaluation/results.md) for eve
 ### Option A: uv
 
 ```bash
-git clone <your-public-repository-url>
-cd huvo-northstar-agent
+git clone https://github.com/kunalwagh101/northstar-agent.git
+cd northstar-agent
 cp .env.example .env
 uv sync --extra dev
 uv run uvicorn app.main:app --reload

@@ -8,7 +8,7 @@ Hi Aditi,
 
 Please find my completed Forward Deployed Engineer assignment below.
 
-GitHub repository: `<PUBLIC_GITHUB_REPOSITORY_LINK>`
+GitHub repository: https://github.com/kunalwagh101/northstar-agent
 
 Demo video: `<LOOM_OR_VIDEO_LINK>`
 
